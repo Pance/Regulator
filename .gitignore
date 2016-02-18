@@ -12,3 +12,5 @@ lib/
 target/
 pom.xml
 pom.xml.asc
+# put sensitive configs for cloudformation templates here
+src/regulator/configs/

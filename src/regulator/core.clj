@@ -1,6 +1,8 @@
-(ns regulator.core)
+(ns regulator.core
+  (:require [regulator.templates.worker-spotfleet :as worker-spotfleet]
+            [aws.cloudformation]
+            [clojure.data.json]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn launch-worker-spot-fleet! []
+  (aws.cloudformation/create-stack! (worker-spotfleet/stack-name)
+                                    (clojure.data.json/write-str worker-spotfleet/template)))
