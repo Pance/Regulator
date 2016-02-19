@@ -6,4 +6,6 @@
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/data.json "0.2.6"]
                  [org.clojure/data.codec "0.1.0"]
-                 [amazonica "0.3.50"]])
+                 [org.clojure/core.async "0.2.374"]
+                 [amazonica "0.3.50"]
+                 [clj-http "2.1.0"]])

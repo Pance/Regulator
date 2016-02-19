@@ -40,4 +40,6 @@
    :Resources {"SpotFleet" spot-fleet-resource
                "InstanceProfile" {:Type "AWS::IAM::InstanceProfile"
                                   :Properties {:Path "/"
-                                               :Roles [(:instance-role config)]}}}})
+                                               :Roles [(:instance-role config)]}}}
+   :Outputs {"SpotFleetId" {:Description "The PhysicalID of the SpotFleetRequest"
+                            :Value {:Ref "SpotFleet"}}}})
