@@ -11,4 +11,5 @@
                   :template-body template-body
                   :parameters params)))
 
-;(describe-stacks)
+(defn describe-stack [stack-name]
+  (get (:stacks (amazonica.aws.cloudformation/describe-stacks :stack-name stack-name)) 0))
